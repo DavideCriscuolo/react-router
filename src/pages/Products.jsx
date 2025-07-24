@@ -20,7 +20,7 @@ export default function Products() {
     <>
       <main>
         <div className="container">
-          <div className="row row-cols-4">
+          <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 ">
             {products.map((product) => {
               return (
                 <div className="col p-2">
@@ -28,8 +28,14 @@ export default function Products() {
                     <img src={product.image} alt="Title" />
                     <div className="card-body">
                       <h4 className="card-title">{product.title}</h4>
-                      <p className="card-text">{product.description}</p>
-                      <span>{product.category}</span>
+                      <p className="card-text">
+                        <strong>Descrizione prodotto: </strong>{" "}
+                        {product.description}
+                      </p>
+                      <span>
+                        {" "}
+                        <strong>Categoria:</strong> {product.category}
+                      </span>
                     </div>
                   </div>
                 </div>
