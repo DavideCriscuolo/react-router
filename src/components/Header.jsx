@@ -21,15 +21,17 @@ export default function Header() {
 
   return (
     <>
-      <nav className="nav justify-content-center p-2  ">
-        {menu.map((link) => {
-          return (
-            <NavLink className="nav-link" key={link.id} to={link.to}>
-              {link.title}
-            </NavLink>
-          );
-        })}
-      </nav>
+      <header>
+        <nav className="nav justify-content-center p-2  ">
+          {menu.map((link) => {
+            return (
+              <NavLink className="nav-link" key={link.id} to={link.to}>
+                {link.title}
+              </NavLink>
+            );
+          })}
+        </nav>
+      </header>
     </>
   );
 }
