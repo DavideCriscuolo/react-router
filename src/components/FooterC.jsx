@@ -24,14 +24,12 @@ export default function FooterC() {
         <div className="container">
           <div className="row">
             <div className="col">
-              {menuFooter.map((link) => {
+              {menuFooter.map((link, index) => {
                 return (
-                  <ul className="list-unstyled">
+                  <ul key={link.id} className="list-unstyled">
                     <li>
                       {" "}
-                      <a href="" key={link.id}>
-                        {link.title}
-                      </a>
+                      <a href="">{link.title}</a>
                     </li>
                   </ul>
                 );
